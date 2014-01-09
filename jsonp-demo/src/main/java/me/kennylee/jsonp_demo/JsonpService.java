@@ -39,7 +39,7 @@ public class JsonpService extends HttpServlet {
 		String name = request.getParameter("name");
 		String msg = null;
 		boolean isCross = false;
-		if (StringUtils.isNotBlank(callBack) || StringUtils.isNoneBlank(name)) {
+		if (StringUtils.isNotBlank(callBack) && StringUtils.isNoneBlank(name)) {
 			msg = "Hello " + name + " !";
 			isCross = true;
 		} else {
